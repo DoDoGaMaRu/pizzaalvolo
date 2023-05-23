@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* init */
+* {margin: 0; padding: 0;}
+
+/* Layout */
+#main-tap-header {width: 100%; min-width: 1280px; position: absolute; top: 0; margin: 0 auto; z-index: 4; background-color: #41b6e6;}
+
+/* tap-top */
+.main-tap-top {width: 100%; height: 70px; display: table;}
+.main-tap-top .tap-top-left {display: table-cell; width: 20%; padding-left: 30px; vertical-align: baseline;}
+.main-tap-top .tap-top-middle {display: table-cell; width: 55%; padding-left: 20px; text-align: center; vertical-align: baseline; letter-spacing: -.3px; font-size: 20px; font-family: Noto Sans CJK KR Regular; color: #fff;}
+.main-tap-top .tap-top-right {float: right; width: 290px;}
+
+.tap-top-left .icon-menu {cursor: pointer; width: 25px; height: 21px;}
+.tap-top-left .icon-logo {cursor: pointer; width: 170px; height: 19px; margin-left: 20px;}
+
+.tap-top-middle .top-middle-text {cursor: pointer; margin-right: 3%;}
+
+.tap-top-right .top-right-layout{position: relative;}
+.tap-top-right .top-right-text-layout {margin-top: 32px; font-size: 17px; color: #001951; font-family: Noto Sans CJK KR Regular;}
+.tap-top-right .top-right-text-layout .top-right-text {cursor: pointer; margin-right: 3%; word-break: keep-all;}
+.tap-top-right .icon-pizza {cursor: pointer; position: absolute; width: 44px; height: 47px; top: -10px; right: 20px;}
+
+/* tap-slide */
+.main-tap-slide {width: 100%; height: 10px; position: relative; z-index: 3;}
+.main-tap-slide .icon-plane {width: 41px; height: 18px; position: absolute; transition: left .5s;}
+
+
+/* tap-nav */
+.main-tap-nav {display: none;}
+
+@font-face {
+  font-family: "Noto Sans CJK KR Regular";
+  src: url("./font/NotoSansKR-Regular.otf");
+}
