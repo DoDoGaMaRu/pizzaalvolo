@@ -1,0 +1,24 @@
+.carousel-indicators [data-bs-target]{
+    box-sizing:content-box;
+    flex:0 1 auto;
+    width:15px;
+    height:15px;
+    padding:0;
+    margin-right:3px;
+    margin-left:3px;
+    text-indent:-999px;
+    cursor:pointer;
+    background-color:#fff;
+    background-clip:padding-box;
+    border:0;border-top:10px solid transparent;
+    border-bottom:10px solid transparent;
+    opacity:1;
+    transition:opacity .6s ease
+}
+button {
+    border-radius: 100%;
+    background-color: #ffffff;
+}
+.carousel-indicators .active{
+    background-color: #41b6e6;
+}
