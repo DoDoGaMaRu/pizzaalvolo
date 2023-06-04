@@ -1,0 +1,26 @@
+.btn-red-order {
+    background-color: #f9423a;
+    display: flex;
+}
+.inner-div {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+.btn-delivery-icon {
+    height: 64px;
+    margin: auto 40px auto 0;
+}
+.btn-delivery-text {
+    color: #ffffff;
+    font-size: 28px;
+    height: 120px;
+    line-height: 120px;
+}
+.btn-red-line {
+    background-color: #ffffff;
+    height: 69px;
+    width: 1px;
+    opacity: .3;
+    margin: auto 0;
+}
