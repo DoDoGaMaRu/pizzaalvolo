@@ -1,0 +1,21 @@
+.mypage-tab-table {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    height: 68px;
+    cursor: pointer;
+}
+.mypage-tab-table > * {
+    display: table-cell;
+    vertical-align: middle;
+    border-bottom: 1px solid #cccccc;
+    text-align: center;
+    font-size: 18px;
+}
+.tab-menu-active{
+    color: #222222;
+    border-bottom: 2px solid #222222;
+}
+.tab-menu-default{
+    color: #ccc;
+}

@@ -1,0 +1,17 @@
+.sort-div {
+    height: 68px;
+}
+.sort-way {
+    float: right;
+    font-size: 20px;
+    height: 68px;
+    padding: 0 30px;
+}
+
+.sort-way [disabled=true] {
+    color: #ccc;
+}
+
+.sort-way [disabled=false] {
+    color: #222;
+}
