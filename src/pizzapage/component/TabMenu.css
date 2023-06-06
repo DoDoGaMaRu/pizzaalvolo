@@ -1,0 +1,20 @@
+.pizza-table {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    height: 68px;
+    cursor: pointer;
+}
+.pizza-table > * {
+    display: table-cell;
+    vertical-align: middle;
+    border: 1px solid #cccccc;
+    text-align: center;
+}
+.tab-title-default {
+    color: #ccc;
+}
+.tab-title-active {
+    color: #fff;
+    background-color: #41b6e6;
+}
