@@ -4,9 +4,30 @@ const port = 3001;
 const cors = require("cors");
 const bodyParser = require("body-parser");
 
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
-app.use(cors());
+// node_modules 에 있는 express 관련 파일을 가져온다.
+// express 는 함수이므로, 반환값을 변수에 저장한다.
+const express = require('express');
+const cors = require("cors");
+const app = express();
+const hostname = "127.0.0.1";
+const port = 8080;
+
+const test = require("./routers/test");
+
+const server = async () => {
+    try {
+        //DB connection
+        app.use(cors({ origin: "http://localhost:3000" }));
+        app.use(express.json());
+        app.use(test);
+        app.listen(port, hostname, function () {
+            console.log("server is running");
+        });
+    }
+    catch (err) {
+        console.log(err);
+    }
+}
 
 const mysql = require("mysql2");
 
@@ -42,16 +63,4 @@ app.post("/insert", (req, res) => {
     );
 });
 
-/*
-app.post("/insert", (req, res) => {
-  const serverId = req.body.id;
-  console.log(serverId);
-
-  const sendText = { text: "자퇴해라 백대환" };
-  res.send(sendText);
-});
-*/
-
-app.listen(port, () => {
-    console.log(`Connect at http://localhost:${port}`);
-});
+server();

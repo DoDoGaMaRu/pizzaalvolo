@@ -29,10 +29,10 @@ export default function ProjectCarousel() {
     return (
         <div>
             <Carousel
-                controls={false}>
+                controls={false} interval={3000} pause={"string"}>
                 {
                     main_img_list.map(item => (
-                        <Carousel.Item key={item.id} interval={3000}>
+                        <Carousel.Item key={item.id}>
                             <img className="d-block w-100" src={item.image} alt={item.alt} />
                         </Carousel.Item>
                     ))
