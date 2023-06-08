@@ -3,11 +3,16 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import MainPage from './mainpage/MainPage'
 import reportWebVitals from './reportWebVitals';
+import Basket from "./basket/Basket";
+import {Provider} from "react-redux";
+import store from "./store"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <MainPage />
+      <Provider store={store}>
+        <Basket />
+      </Provider>
   </React.StrictMode>
 );
 
