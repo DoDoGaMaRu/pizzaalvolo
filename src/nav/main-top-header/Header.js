@@ -6,10 +6,12 @@ import plane from './img/plane_main.png'
 
 function Header() {
     return (
-        <div id="main-tap-header">
-            <TapTop />
-            <TapSlide />
-            <TapNav />
+        <div id="main-tab-header-layout">
+            <div class="main-tap-header">
+                <TapTop />
+                <TapSlide />
+                <TapNav />
+            </div>
         </div>
     )
 }
