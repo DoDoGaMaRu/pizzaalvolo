@@ -1,0 +1,261 @@
+.top-text{
+    width: 1200px;
+    font-size: 22px;
+    border-bottom: 1px solid #999;
+    color: #222;
+    margin: auto;
+    padding-top: 60px;
+    padding-bottom: 27px;
+    vertical-align: baseline;
+}
+.body-container{
+    margin: 70px 0 120px;
+    padding: 0 270px;
+    font-size: 14px;
+    font-weight: 400;
+    vertical-align: baseline;
+}
+.padding-box{
+    width: 660px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+.input-text-box{
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+}
+.input-text-box > input{
+    background-color: rgb(255, 255, 255);
+    color: rgb(34, 34, 34);
+    padding: 15px 10px;
+    border: 0;
+    font-size: 18px;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+    height: 50px;
+    outline: none;
+    box-sizing: border-box;
+}
+.special_signInfo{
+    font-size: 12px;
+    color: #f9423a;
+    text-align: left;
+    padding: 10px 0 0 10px;
+    max-width: 660px;
+}
+.number-area{
+    display: flex;
+    margin-bottom: 20px;
+}
+.number-area-left{
+    width: 30%;
+    margin-right: 10px;
+}
+.number-area-left > div > select{
+    height: 50px;
+    width: 100%;
+    font-size: 20px;
+    appearance: none;
+    background: transparent url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMSIgaGVpZ2h0PSIxMi4xMjUiPjxwYXRoIGQ9Ik0xOC44OC4wMTNMMTAuNSA4LjA1NiAyLjEyLjAxMiAwIDIuMDQ4IDEwLjUgMTIuMTMgMjEgMi4wNDh6IiBmaWxsPSIjMjIyIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz48L3N2Zz4=) no-repeat 100%;
+    background-size: 11px 7px;
+    background-position-x: calc(100% - 15px);
+    padding: 0 10px!important;
+    border: 0;
+    border-bottom: 1px solid #ddd;
+}
+.number-area-right{
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+.number-area-right > .input-number-box{
+    position: relative;
+    height: 50px;
+    border-bottom: 1px solid #ddd;
+}
+.input-number-box > input{
+    background-color: rgb(255, 255, 255);
+    font-size: 18px!important;
+    border: 0;
+    border-bottom: 1px solid #ddd;
+    position: absolute;
+    width: 100%;
+    padding: 15px 150px 15px 10px;
+    outline: none;
+    height: 50px;
+    box-sizing: border-box;
+}
+.btn-modify-number-gray{
+    font-size: 16px;
+    letter-spacing: -.4px;
+    width: 128px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    background-color: #ccc;
+    color: #fff;
+}
+.padding-box2{
+    width: 660px;
+}
+.mail-area{
+    display: flex;
+    margin-bottom: 20px;
+    -webkit-box-align: baseline;
+    align-items: baseline;
+    font-size: 18px;
+}
+.mail-area-left{
+    width: 47%;
+    margin-right: 5px;
+}
+.mail-area-left > .alvolo-input{
+    position: relative;
+    overflow: hidden;
+    font-size: 18px;
+}
+.alvolo-input > input{
+    background-color: rgb(255, 255, 255);
+    color: rgb(34, 34, 34);
+    padding: 15px 10px;
+    border: 0;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+    height: 50px;
+    outline: none;
+    box-sizing: border-box;
+}
+.mail-area-right{
+    -webkit-box-flex: 1;
+    flex: 1;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin-left: 5px;
+}
+.mail-area-right-direct{
+    width: 80%;
+    position: absolute;
+    height: 50px;
+    outline: none;
+    box-sizing: border-box;
+    padding: 15px 10px;
+    border: 0;
+    border-bottom: 1px solid #ddd;
+    color: #222;
+    font-size: 18px;
+}
+.alvolo-select{
+    height: 50px;
+    cursor: pointer;
+    appearance: none;
+    width: 100%;
+    font-size: 20px;
+    color: #222;
+    background: transparent url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMSIgaGVpZ2h0PSIxMi4xMjUiPjxwYXRoIGQ9Ik0xOC44OC4wMTNMMTAuNSA4LjA1NiAyLjEyLjAxMiAwIDIuMDQ4IDEwLjUgMTIuMTMgMjEgMi4wNDh6IiBmaWxsPSIjMjIyIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz48L3N2Zz4=) no-repeat 100%;
+    background-size: 11px 7px;
+    background-position-x: calc(100% - 15px);
+    border: 0;
+    border-bottom: 1px solid #ddd;
+    padding: 0 10px!important;
+}
+.box-text-alvolo-input-auth{
+    margin-bottom: 20px;
+    position: relative;
+    height: 50px;
+    border-bottom: 1px solid #ddd;
+}
+.alvolo-input-default{
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    width: 100%;
+    padding: 15px 150px 15px 10px;
+    color: #222;
+    font-size: 18px!important;
+    border: 0;
+    border-bottom: 1px solid #ddd;
+    outline: none;
+    height: 50px;
+    box-sizing: border-box;
+}
+.input-default{
+    background-color: rgb(255, 255, 255);
+    color: rgb(34, 34, 34);
+    padding: 15px 10px;
+    border: 0;
+    border-bottom: 1px solid #ddd;
+    font-size: 18px;
+    width: 100%;
+    height: 50px;
+    outline: none;
+    box-sizing: border-box;
+}
+.membership-check-toggle{
+    margin-top: 15px;
+    font-size: 18px;
+    vertical-align: middle;
+    display: inline-block;
+}
+.check-toggle{
+    width: 28px;
+    height: 28px;
+    float: left;
+}
+.check-toggle-whole{
+    display: inline-block;
+}
+.checkImg{
+    float: left;
+    width: 27px;
+    height: 27px;
+    display: inline-block;
+    cursor: pointer;
+}
+.toggle-txt{
+    font-size: 11px;
+    color: rgb(85, 85, 85);
+    float: left;
+    margin-left: 10px;
+    line-height: 27px;
+    display: inline-block;
+    cursor: pointer;
+}
+.context{
+    float: left;
+    line-height: 28px;
+    margin-left: 4px;
+    margin-right: 10px;
+    color: #666;
+    cursor: pointer;
+}
+.edit-membership-button-container{
+    width: 100%;
+    color: #fff;
+    font-size: 22px;
+    margin-top: 60px;
+}
+.gray-button{
+    width: 325px;
+    height: 64px;
+    background-color: #ccc;
+    line-height: 64px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 4px;
+}
+.blue-button{
+    width: 325px;
+    height: 64px;
+    background-color: #41b6e6;
+    line-height: 64px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+}
