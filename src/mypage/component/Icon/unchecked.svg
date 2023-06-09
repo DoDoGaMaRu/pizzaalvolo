@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="uncheked" width="54" height="54" viewBox="0 0 54 54">
+    <defs>
+        <style>
+            .cls-1 {
+            fill: #fff;
+            fill-opacity: 0;
+            stroke: #ccc;
+            stroke-width: 2px;
+            }
+
+            .cls-2 {
+            fill: #ccc;
+            fill-rule: evenodd;
+            }
+        </style>
+    </defs>
+    <circle id="Ellipse_2_copy_2" class="cls-1" cx="27" cy="27" r="26"/>
+    <path id="Forma_1" class="cls-2" d="M54.053,757.567l-10.26-10.928L41,749.356,54.053,763,72,743.716,69.206,741Z" transform="translate(-29 -724)"/>
+</svg>
