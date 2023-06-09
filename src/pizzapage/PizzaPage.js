@@ -84,6 +84,7 @@ export default function PizzaPage() {
     const [tab_menu, setTabMenu] = useState('전체');
     const onChangeTab = useCallback( (text) => {
         setTabMenu(text);
+        setPage(1);
         if(text === "전체") {
             setMenuList([...menuListSortByRegDate]);
         }
