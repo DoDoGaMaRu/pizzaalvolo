@@ -10,9 +10,7 @@ function MainPage() {
     <div>
       <Header />
       <Content />
-        <PizzaPage></PizzaPage>
         <MyPage></MyPage>
-        <StorekeeperPage></StorekeeperPage>
     </div>
   );
 }
