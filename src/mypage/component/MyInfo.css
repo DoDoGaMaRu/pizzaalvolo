@@ -259,3 +259,9 @@
     display: inline-block;
     cursor: pointer;
 }
+.review-btn{
+    border: 3px solid #41b6e6;
+    display: inline-block;
+    font-size: 25px;
+    padding: 0px 10px;
+}

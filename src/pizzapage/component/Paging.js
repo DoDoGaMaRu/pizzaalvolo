@@ -15,7 +15,7 @@ export default function Paging({page, count, setPage}) {
         <Pagination
             activePage={curPage} // {page}
             itemsCountPerPage={2}
-            totalItemsCount={10} // {count}
+            totalItemsCount={count} // {count}
             pageRangeDisplayed={5}
             prevPageText={"‹"}
             nextPageText={"›"}
