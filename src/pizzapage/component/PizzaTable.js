@@ -7,7 +7,7 @@ export default function PizzaTable({pizza_list, cur_page}) {
                 <div className="pizza-menu-item">
                     <div className="container">
                         <div className="pizza-img-container">
-                            <img src={pizza_list[2 * (cur_page - 1)].image} alt="" height="240px"/>
+                            <img src={pizza_list[2 * (cur_page - 1)].img_url} alt="" height="240px"/>
                         </div>
                         <div className="item">
                             <div>
@@ -41,7 +41,7 @@ export default function PizzaTable({pizza_list, cur_page}) {
                         <div className="pizza-menu-item">
                             <div className="container">
                                 <div className="pizza-img-container">
-                                    <img src={pizza_list[2 * (cur_page - 1) + 1].image} alt="" height="240px"/>
+                                    <img src={pizza_list[2 * (cur_page - 1) + 1].img_url} alt="" height="240px"/>
                                 </div>
                                 <div className="item">
                                     <div>
