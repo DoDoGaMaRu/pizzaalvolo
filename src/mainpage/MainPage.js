@@ -8,9 +8,7 @@ import StorekeeperPage from "../storekeeperpage/StorekeeperPage";
 function MainPage() {
   return (
     <div>
-      <Header />
       <Content />
-        <MyPage></MyPage>
     </div>
   );
 }

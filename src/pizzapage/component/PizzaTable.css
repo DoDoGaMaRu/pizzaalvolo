@@ -56,7 +56,7 @@
     height: 55px;
     border-radius: 50px;
     font-size: 18px;
-    color: #41b6e6;
+    color: #41b6e6 !important;
     border: 2px solid #41b6e6;
     margin-right: 30px;
     margin-left: 125px;
@@ -69,7 +69,7 @@
     height: 55px;
     border-radius: 50px;
     font-size: 18px;
-    color: #41b6e6;
+    color: #41b6e6 !important;
     border: 2px solid #41b6e6;
     text-align: center;
     margin-top: 93px;
