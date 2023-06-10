@@ -13,6 +13,7 @@ const review = {
 
 export default function Review() {
     const id = useParams()
+    console.log(id)
     return(
         <div className="review_container">
             <div className="review_header">
