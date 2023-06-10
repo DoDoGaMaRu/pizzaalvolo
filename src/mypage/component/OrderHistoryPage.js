@@ -7,13 +7,18 @@ const ARRAY = [0, 1, 2, 3, 4];
 
 export default function OrderHistoryPage() {
    const [toggle, setToggle] = useState(false);
-   const [isWrite, setIsWrite] = useState(false);//Todo DB에서 리뷰 유무를 받아와야함
+   const [isWrite, setIsWrite] = useState(false);//Todo DB에서 리뷰 유무를 받아 설정
    const click = () => {
        setToggle(!toggle)
    }
    const write = () => {
        setToggle(!toggle);
         setIsWrite(true);
+        //Todo Insert Review
+       //   order_id: 숫자,
+       //   user_sn: 숫자,
+       //   star: 숫자,
+       //   info: 문자열
    }
     return (
         <div className="my-info-page">
@@ -27,7 +32,7 @@ export default function OrderHistoryPage() {
                             주문일자
                         </div>
                         <div className="value">
-                            
+
                         </div>
                     </div>
                     <div className="input-text-box">
