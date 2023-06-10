@@ -17,7 +17,7 @@
 .tap-top-left .icon-menu {cursor: pointer; width: 25px; height: 21px;}
 .tap-top-left .icon-logo {cursor: pointer; width: 170px; height: 19px; margin-left: 20px;}
 
-.tap-top-middle .top-middle-text {cursor: pointer; margin-right: 3%;}
+.tap-top-middle .top-middle-text {cursor: pointer; margin-right: 3%; color: #ffffff}
 
 .tap-top-right .top-right-layout{position: relative;}
 .tap-top-right .top-right-text-layout {margin-top: 32px; font-size: 17px; color: #001951; font-family: Noto Sans CJK KR Regular;}

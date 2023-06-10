@@ -5,7 +5,7 @@ import {useCallback, useState} from "react";
 import OrderHistoryPage from "./component/OrderHistoryPage";
 
 export default function MyPage() {
-    const [curTab, setCurTab] = useState("정보수정");
+    const [curTab, setCurTab] = useState("주문내역");
     const onChangeTabMenu = useCallback((text) => {
         setCurTab(text);
     })

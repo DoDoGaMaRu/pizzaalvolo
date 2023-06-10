@@ -3,6 +3,7 @@ import menu from './img/menu_main.png'
 import logo from './img/logo_main.png'
 import pizza from './img/pizza_main.png'
 import plane from './img/plane_main.png'
+import {Link} from "react-router-dom";
 
 function Header() {
     return (
@@ -17,14 +18,14 @@ function Header() {
 }
 
 function TapTop() {
-    let middleItems = ['피자', '스페셜반반피자', '세트', '사이드', '하프엔하프', '멤버십·제휴할인', '이벤트']
-    let rightItems = ['마이페이지', '회원가입', '로그인']
+    let middleItems = [{text: '피자', url: '/pizza'}, {text: '스페셜반반피자', url: ''}, {text: '세트', url: ''}, {text: '사이드', url: ''}, {text: '하프엔하프', url: ''}, {text: '멤버십·제휴할인', url: ''}, {text: '이벤트', url: ''}]
+    let rightItems = [{text: '마이페이지', url: '/mypage'}, {text: '회원가입', url: ''}, {text: '로그인',  url: ''}]
 
     return (
         <div class="main-tap-top">
             <div class="tap-top-left">
                 <img class="icon-menu" src={menu}></img>
-                <img class="icon-logo" src={logo}></img>
+                <Link to={"/"}><img class="icon-logo" src={logo}></img></Link>
             </div>
             <div class="tap-top-middle">
                 {middleItems.map(e=>TopMiddleText(e))}
@@ -34,22 +35,24 @@ function TapTop() {
                     <div class="top-right-text-layout">
                         {rightItems.map(e=>TopRightText(e))}
                     </div>
+                    <Link to={'/basket'}>
                     <img class="icon-pizza" src={pizza}></img>
+                    </Link>
                 </div>
             </div>
         </div>
     )
 }
 
-function TopMiddleText(text) {
+function TopMiddleText(prop) {
     return (
-        <span class="top-middle-text">{text}</span>
+        <Link to={prop.url}><span class="top-middle-text">{prop.text}</span></Link>
     )
 }
 
-function TopRightText(text) {
+function TopRightText(prop) {
     return (
-        <span class="top-right-text">{text}</span>
+        <Link to={prop.url}><span class="top-right-text">{prop.text}</span></Link>
     )
 }
 
