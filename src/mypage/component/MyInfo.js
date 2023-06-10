@@ -1,22 +1,37 @@
 import "./MyInfo.css"
 import uncheckedImg from "./Icon/unchecked.svg";
 import checkedImg from "./Icon/checked.svg";
-import {useState} from "react";
+import {useEffect, useRef, useState} from "react";
 
 export default function MyInfo(){
+    const [userInfo, setUserInfo] = useState({
+        user_sn: 0,
+        address: "",
+    })
+    //const [address, setAddress] = useState("") //Todo DB에서 받아오기
+    const address = useRef("주소");
+    const setAddress = (e) => {
+        address.current = e.target.value;
+    }
     //Todo get
     // name
     // address
     const updateUser = () => {
-        //Todo update User
-        // user_sn: 숫자,
-        // address: 문자열
+        setUserInfo({...userInfo, address: {address}})
+        console.log(userInfo.address);
+        const post = {
+            userInfo: userInfo,
+        };
+
+        fetch ("url", {
+            method: "post",
+            headers: {
+                "content-type": "application/json",
+            },
+            body: JSON.stringify(post),
+        });
     }
-    const [address, setAddress] = useState("") //Todo DB에서 받아오기
-    const onChangeAddress = (e) => {
-        console.log(e.target.value);
-        setAddress(e.target.value);
-    }
+
    return (
         <div className="my-info-page">
             <div className="top-text">
@@ -83,11 +98,8 @@ export default function MyInfo(){
                         </div>
                     </div>
                     <div className="box-text-alvolo-input-auth">
-                        <input type="address" placeholder="주소" onChange={onChangeAddress} className="alvolo-input-default"/>
+                        <input type="address" placeholder="주소" value={address} onChange={setAddress} className="alvolo-input-default"/>
                         <span className="btn-modify-number-gray"> 주소찾기</span>
-                    </div>
-                    <div className="box-text-alvolo-input-auth">
-                        <input type="text" placeholder="상세주소 입력" className="input-default"/>
                     </div>
                     <div className="membership-check-toggle">
                         <div className="check-toggle">
