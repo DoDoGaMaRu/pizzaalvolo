@@ -73,7 +73,7 @@ export default function MyInfo(){
                         <span className="btn-modify-number-gray"> 주소찾기</span>
                     </div>
                     <div className="box-text-alvolo-input-auth">
-                        <input type="text" placeholder="상세주소 입력" disabled="false" onInput="" className="input-default"/>
+                        <input type="text" placeholder="상세주소 입력" className="input-default"/>
                     </div>
                     <div className="membership-check-toggle">
                         <div className="check-toggle">

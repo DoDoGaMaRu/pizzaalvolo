@@ -7,8 +7,13 @@ const ARRAY = [0, 1, 2, 3, 4];
 
 export default function OrderHistoryPage() {
    const [toggle, setToggle] = useState(false);
+   const [isWrite, setIsWrite] = useState(false);//Todo DB에서 리뷰 유무를 받아와야함
    const click = () => {
        setToggle(!toggle)
+   }
+   const write = () => {
+       setToggle(!toggle);
+        setIsWrite(true);
    }
     return (
         <div className="my-info-page">
@@ -49,7 +54,7 @@ export default function OrderHistoryPage() {
 
                         </div>
                     </div>
-                    <div role="button" className="review-btn" onClick={click}> 후기작성 </div>
+                    <div role="button" className="review-btn" onClick={isWrite ? null : click}> 후기작성 </div>
                     {toggle ?
                         <div className="number-area">
                             <div className="number-area-left">
@@ -58,12 +63,14 @@ export default function OrderHistoryPage() {
                             <div className="number-area-right">
                                 <div className="input-number-box">
                                     <input type="text" placeholder="매우맛있음" />
-                                    <span className="btn-modify-number-gray">등록</span>
+                                    <span className="btn-modify-number-gray" onClick={() => {
+                                        click();
+                                        write();
+                                    }}>등록</span>
                                 </div>
                             </div>
                         </div> : null
                     }
-
                 </div>
             </div>
         </div>
