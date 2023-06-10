@@ -1,13 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import MainPage from './mainpage/MainPage'
 import reportWebVitals from './reportWebVitals';
+import Header from "./nav/main-top-header/Header";
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
+import MainPage from "./mainpage/MainPage";
+import MyPage from "./mypage/MyPage";
+import PizzaPage from "./pizzapage/PizzaPage";
+import Review from "./review/Review";
+import Basket from "./basket/Basket";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
-        <MainPage />
+        <BrowserRouter>
+            <Header/>
+            <Routes>
+                <Route path="/" element={<MainPage/>}></Route>
+                <Route path="/mypage" element={<MyPage/>}></Route>
+                <Route path="/pizza" element={<PizzaPage/>}></Route>
+                <Route path="/review/:id" element={<Review />}></Route>
+                <Route path="/basket" element={<Basket/>}></Route>
+            </Routes>
+        </BrowserRouter>
     </React.StrictMode>
 );
 

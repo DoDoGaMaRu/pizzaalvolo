@@ -1,4 +1,5 @@
 import "./Review.css"
+import {useParams} from "react-router-dom";
 
 const dummy = {
     img: "https://img.pizzaalvolo.co.kr/uploads/tmp9D88.png",
@@ -7,6 +8,8 @@ const dummy = {
 }
 
 export default function Review() {
+    const id = useParams()
+    console.log(id)
     return(
         <div className="review_container">
             <div className="review_header">

@@ -12,48 +12,56 @@ const ori_menu_list = [
         image: 'https://img.pizzaalvolo.co.kr/uploads/tmp9D88.png',
         name: '쉬림프&핫치킨골드피자',
         price: 29000,
+        id:1
     },
     {
         category: '장인',
         image: 'https://img.pizzaalvolo.co.kr/uploads/tmpE586.png',
         name: '날개피자',
         price: 29000,
+        id:2
     },
     {
         category: '달인',
         image: 'https://img.pizzaalvolo.co.kr/uploads/tmpAF7B.png',
         name: '어꺠피자',
         price: 27000,
+        id:3
     },
     {
         category: '달인',
         image: 'https://img.pizzaalvolo.co.kr/uploads/tmp14B4.png',
         name: '꿈을피자',
         price: 27000,
+        id:4
     },
     {
         category: '달인',
         image: 'https://img.pizzaalvolo.co.kr/uploads/tmp1BF5.png',
         name: '팔도피자',
         price: 31500,
+        id:5
     },
     {
         category: '명품',
         image: 'https://img.pizzaalvolo.co.kr/uploads/tmp4608.png',
         name: '웃음꽃피자',
         price: 24500,
+        id:6
     },
     {
         category: '명품',
         image: 'https://img.pizzaalvolo.co.kr/uploads/tmp579C.jpg',
         name: '전주불백피자',
         price: 24500,
+        id:7
     },
     {
         category: '명품',
         image: 'https://img.pizzaalvolo.co.kr/uploads/tmp7A7B.png',
         name: '팔자피자',
         price: 24500,
+        id:8
     },
 ]
 const menuListSortByRegDate = [...ori_menu_list];
