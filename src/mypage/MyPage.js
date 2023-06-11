@@ -9,6 +9,7 @@ export default function MyPage() {
     const onChangeTabMenu = useCallback((text) => {
         setCurTab(text);
     })
+
     const showPage = () => {
         switch(curTab){
             case '주문내역':
