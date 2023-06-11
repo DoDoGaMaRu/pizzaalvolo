@@ -7,7 +7,6 @@ const ARRAY = [0, 1, 2, 3, 4];
 function Rating(star) {
     let clicked = [false, false, false, false, false];
     clicked = clicked.map((el, idx) => idx < star.star);
-    console.log(clicked)
     return (
         <Wrap>
             <Stars>

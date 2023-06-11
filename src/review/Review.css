@@ -22,6 +22,8 @@
 }
 .review_header .review_menu .menu_image {
     margin: 20px;
+    object-fit: cover;
+    max-width: 600px;
 }
 .review_header .review_menu .menu_info_area{
     margin: 20px;
