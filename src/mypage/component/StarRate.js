@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const ARRAY = [0, 1, 2, 3, 4];
 
-function Rating() {
+function Rating({setScore}) {
     const [clicked, setClicked] = useState([false, false, false, false, false]);
 
     const handleStarClick = index => {
@@ -14,6 +14,7 @@ function Rating() {
             clickStates[i] = i <= index ? true : false;
         }
         setClicked(clickStates);
+        setScore(index + 1);
     };
 
     useEffect(() => {
@@ -31,7 +32,7 @@ function Rating() {
                     return (
                         <FaStar
                             key={idx}
-                            size="50"
+                            size="25"
                             onClick={() => handleStarClick(el)}
                             className={clicked[el] && 'yellowStar'}
                         />

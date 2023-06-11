@@ -1,8 +1,37 @@
 import "./MyInfo.css"
 import uncheckedImg from "./Icon/unchecked.svg";
 import checkedImg from "./Icon/checked.svg";
+import {useEffect, useRef, useState} from "react";
 
 export default function MyInfo(){
+    const [userInfo, setUserInfo] = useState({
+        user_sn: 0,
+        address: "",
+    })
+    //const [address, setAddress] = useState("") //Todo DB에서 받아오기
+    const address = useRef("주소");
+    const setAddress = (e) => {
+        address.current = e.target.value;
+    }
+    //Todo get
+    // name
+    // address
+    const updateUser = () => {
+        setUserInfo({...userInfo, address: {address}})
+        console.log(userInfo.address);
+        const post = {
+            userInfo: userInfo,
+        };
+
+        fetch ("url", {
+            method: "post",
+            headers: {
+                "content-type": "application/json",
+            },
+            body: JSON.stringify(post),
+        });
+    }
+
    return (
         <div className="my-info-page">
             <div className="top-text">
@@ -69,11 +98,8 @@ export default function MyInfo(){
                         </div>
                     </div>
                     <div className="box-text-alvolo-input-auth">
-                        <input type="address" placeholder="주소" className="alvolo-input-default"/>
+                        <input type="address" placeholder="주소" value={address} onChange={setAddress} className="alvolo-input-default"/>
                         <span className="btn-modify-number-gray"> 주소찾기</span>
-                    </div>
-                    <div className="box-text-alvolo-input-auth">
-                        <input type="text" placeholder="상세주소 입력" disabled="false" onInput="" className="input-default"/>
                     </div>
                     <div className="membership-check-toggle">
                         <div className="check-toggle">
@@ -94,7 +120,7 @@ export default function MyInfo(){
                 </div>
                 <div className="edit-membership-button-container">
                     <div className="gray-button">취소</div>
-                    <div className="blue-button">확인</div>
+                    <div className="blue-button" onClick={updateUser}>확인</div>
                 </div>
             </div>
         </div>
