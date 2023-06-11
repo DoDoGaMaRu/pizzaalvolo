@@ -56,3 +56,17 @@
 .review_item .review_item_list_header .review_item_list_user {
     width: 200px;
 }
+.review_item .item_container {
+    display: flex;
+    border-bottom: 1px solid #999;
+}
+.review_item .item_container .info {
+    width: 850px;
+    text-align: center;
+    line-height: 50px;
+}
+.review_item .item_container .name {
+    width: 200px;
+    text-align: center;
+    line-height: 50px;
+}
