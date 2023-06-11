@@ -74,7 +74,11 @@ export default function PizzaPage({pizzaList}) {
       <div className="pizzaPage">
           <TabMenu onChangeTab={onChangeTab} tab_menu={tab_menu}></TabMenu>
           <SortDiv cur_menu={tab_menu} setSort={changeSort}></SortDiv>
-          <PizzaTable pizza_list={menuList} cur_page={page}></PizzaTable>
+          {
+              menuList.length == 0 ? (null) : (
+                  <PizzaTable pizza_list={menuList} cur_page={page}></PizzaTable>
+              )
+          }
           <Paging page={page} setPage={changePage} count={menuList.length}></Paging>
       </div>
     );
