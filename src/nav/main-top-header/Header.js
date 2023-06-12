@@ -14,7 +14,7 @@ function Header() {
             <div class="main-tap-header">
                 <TapTop setOpenNav={setOpenNav} />
                 <TapSlide />
-                <TapNav openNav={openNav} />
+                <TapNav openNav={openNav} setOpenNav={setOpenNav} />
             </div>
         </div>
     )
@@ -69,7 +69,7 @@ function TapSlide() {
 }
 
 
-function TapNav({openNav}) {
+function TapNav({openNav, setOpenNav}) {
     let navItems = [
             [{text: '피자', url: '/pizza'}, {text: '전체피자', url: '/pizza'}, {text: '스페셜반반피자',  url: '#'}, {text: '세트메뉴',  url: '#'}, {text: '하프엔하프',  url: '#'}],
             [{text: '사이드 메뉴', url: '#'}],
@@ -83,7 +83,7 @@ function TapNav({openNav}) {
     return(
         <div className = "main-tap-nav" style={openNav ? {} : {height: '0'}}>
             <div class="nav-main">
-                {navItems.map(e => TapNavCollapse(e))}
+                {navItems.map(e => TapNavCollapse(e, setOpenNav))}
             </div>
             <div class="nav-bottom">
                 <span class="nav-bottom-item">회사소개></span>
@@ -95,16 +95,16 @@ function TapNav({openNav}) {
     )
 }
 
-function TapNavCollapse(prop) {
+function TapNavCollapse(prop, setOpenNav) {
     return (
-        <div class="tap-nav-collapse">{prop.map(e => NavItem(e))}</div>
+        <div class="tap-nav-collapse">{prop.map(e => NavItem(e, setOpenNav))}</div>
     )
 }
 
-function NavItem(prop) {
+function NavItem(prop, setOpenNav) {
     return (
         <div class="nav-item">
-            <Link to={prop.url}><div class="text-box">{prop.text}</div></Link>
+            <Link to={prop.url}><div class="text-box" onClick={() => setOpenNav((e) => !e)}>{prop.text}</div></Link>
         </div>
     )
 }
