@@ -8,6 +8,7 @@ export default function OrderHistoryComponent({order}) {
     const [info, setInfo] = useState("");
     const [score, setScore] = useState(0);
     const [isWrite, setIsWrite] = useState(order.review);//Todo DB에서 리뷰 유무를 받아 설정
+    const [id, setId] = useState(order.id);
     const click = () => {
         setToggle(!toggle)
     }
@@ -15,15 +16,18 @@ export default function OrderHistoryComponent({order}) {
         setToggle(!toggle);
         setIsWrite(true);
         setReview({...review, star: {score}, info: {info}})
-        console.log(review.star);
-        console.log(review.info);
+        console.log(score);
+        console.log(info);
         const post = {
-            review: review,
+            order_id: id,
+            user_sn: 1,
+            star: score,
+            info: info,
         };
-
-        fetch("url", {
+        console.log(post);
+        fetch("http://202.31.202.34:443/review", {
             method: "post",
-            header: {
+            headers: {
                 "content-type": "application/json",
             },
             body: JSON.stringify(post),

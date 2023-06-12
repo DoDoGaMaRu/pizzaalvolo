@@ -7,8 +7,11 @@ import "./PizzaPage.css"
 
 
 export default function PizzaPage({pizzaList}) {
-    const [ori_menu_list, useOri_menu_list] = useState([...pizzaList]);
+    console.log(pizzaList)
+    const ori_menu_list = [...pizzaList];
+    console.log(ori_menu_list);
     const menuListSortByRegDate = [...ori_menu_list];
+    console.log(menuListSortByRegDate);
     let menuListSortByLowPrice = ori_menu_list.sort(function compare(a, b) {
         return a.price - b.price;
     });

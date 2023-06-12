@@ -9,7 +9,7 @@ export default function Temp() {
         method: 'Get'
     }).then(res => res.json()).then(data => {
         setPizzaList(data);
-        console.log(pizzaList);
+        console.log(data.menus);
         setLoading(false);
     })}, loading)
 

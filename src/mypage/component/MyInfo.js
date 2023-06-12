@@ -30,10 +30,11 @@ export default function MyInfo(){
         console.log(address);
         setUserInfo({...userInfo, address: {address}})
         const post = {
-            userInfo: userInfo,
+            user_sn: 1,
+            address: address,
         };
 
-        fetch ("http://202.31.202.34:443/user", {
+        fetch ("http://202.31.202.34:443/user/update", {
             method: "post",
             headers: {
                 "content-type": "application/json",
