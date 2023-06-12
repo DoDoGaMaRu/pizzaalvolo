@@ -28,9 +28,16 @@
 .main-tap-slide {width: 100%; height: 10px; position: relative; z-index: 3;}
 .main-tap-slide .icon-plane {width: 41px; height: 18px; position: absolute; transition: left .5s;}
 
-
 /* tap-nav */
-.main-tap-nav {overflow: hidden; height: 0;}
+.main-tap-nav {overflow: hidden; max-width: 1200px; height: 336px; margin: 0 auto; transition-property: height; transition: 0.3s; }
+
+.main-tap-nav .nav-main {display: flex; justify-content: space-evenly;}
+.main-tap-nav .tap-nav-collapse {margin-top: 43px;}
+.main-tap-nav .tap-nav-collapse .nav-item .text-box {color: #ffffff; font-size: 15px; margin-bottom: 7px; font-family: Noto Sans CJK KR Regula;}
+.main-tap-nav .tap-nav-collapse .nav-item:first-child .text-box {color: #001951; margin-bottom: 22px; font-size: 21px; font-weight: 600;}
+
+.main-tap-nav .nav-bottom {margin: 10px 0 30px 60px;}
+.main-tap-nav .nav-bottom .nav-bottom-item {margin-right: 20px; cursor: pointer; color: #ffffff;}
 
 @font-face {
   font-family: "Noto Sans CJK KR Regular";
