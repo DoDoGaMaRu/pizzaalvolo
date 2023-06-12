@@ -3,10 +3,14 @@ import Chart from "chart.js/auto";
 import "../../index.css";
 
 
-export default function ChartPage({menuData}, {chartData}) {
-
+export default function ChartPage({menuData, chart_data}) {
+    console.log("CHART_PAGE")
+    console.log(menuData);
+    console.log(chart_data);
     const menus = [...menuData];
-    const [chart, setChart] = useState([...chartData]);
+    const [chart, setChart] = useState([...chart_data]);
+    console.log(menus);
+    console.log(chart);
 
     const labels = Object.keys(chart);
     const data = Object.values(chart);
