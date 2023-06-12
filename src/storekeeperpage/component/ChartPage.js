@@ -1,6 +1,7 @@
-import React, { useEffect, useRef } from "react";
-import Chart from "chart.js/auto";
+import React from "react";
 import "../../index.css";
+import { Bar } from 'react-chartjs-2';
+import "./ChartPage.css";
 
 export default function ChartPage({ menu_data, chart_data }) {
     console.log("CHART_PAGE");
@@ -9,43 +10,21 @@ export default function ChartPage({ menu_data, chart_data }) {
     const menus = [...menu_data];
     const charts = [...chart_data];
 
-    useEffect(() => {
-        const chartConfigs = charts.map((chart) => {
-            const labels = [chart.day_of_week];
-            const data = [chart.total_sales];
-
-            return {
-                type: "bar",
-                data: {
-                    labels: labels,
-                    datasets: [
-                        {
-                            label: "주간 매출",
-                            data: data,
-                        },
-                    ],
-                },
-            };
-        });
-
-        const ctx = chartRef.current.getContext("2d");
-        if (ctx.chart) {
-            ctx.chart.destroy(); // 기존 차트 제거
-        }
-
-        chartConfigs.forEach((chartConfig) => {
-            ctx.chart = new Chart(ctx, chartConfig);
-        });
-    }, [charts]);
-
-    const chartRef = useRef(null);
+    const data = {
+        labels: charts.map((data) => data.day_of_week),
+        datasets:
+            [{
+                label: "주간 매출",
+                data: charts.map((data) => data.total_sales),
+            }]
+    };
 
     return (
         <div>
             <table>
                 <thead>
                 <tr>
-                    <td colSpan={2} style={{ textAlign: "center" }}>
+                    <td className="table-title" colSpan={2}>
                         메뉴
                     </td>
                 </tr>
@@ -54,12 +33,12 @@ export default function ChartPage({ menu_data, chart_data }) {
                 {menus.map((menu) => (
                     <tr key={menu.id}>
                         <td>{menu.name}</td>
-                        <td style={{ paddingLeft: "10px" }}>{menu.count}</td>
+                        <td className="table-sell-cnt">{menu.count}</td>
                     </tr>
                 ))}
                 </tbody>
             </table>
-            <canvas ref={chartRef} id="salesChart"></canvas>
+            <Bar data={data} />;
         </div>
     );
 }

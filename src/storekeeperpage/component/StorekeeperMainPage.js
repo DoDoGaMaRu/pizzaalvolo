@@ -1,24 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../index.css";
+import Temp from "./Temp";
+import MenuRegistrationPage from "./MenuRegistrationPage";
+import "./StoreKeeperMainPage.css"
 
 const StorekeeperMainPage = () => {
-    return (
-        <div className="page">
-            <form className="wrapper-box">
-                <div className="nav">
-                    <div>
-                        <a>마이페이지</a>
+    const [btnState, setBtnState] = useState("main");
+
+    const changeToInsert = () => {
+        setBtnState("insert");
+    };
+
+    const changeToRead = () => {
+        setBtnState("read");
+    };
+
+    const showPage = () => {
+        switch (btnState) {
+            case "main":
+                return (
+                    <div className="main-page">
+                        <form className="wrapper-box">
+                            <h1>MyPage</h1>
+                            <button className="Rbtn" onClick={changeToInsert}>
+                                메뉴 등록
+                            </button>
+                            <button className="Cbtn" onClick={changeToRead}>
+                                판매 내역
+                            </button>
+                        </form>
                     </div>
-                    <div>
-                        <a>로그아웃</a>
-                    </div>
-                </div>
-                <h1>MyPage</h1>
-                <button className="Rbtn">메뉴등록</button>
-                <button className="Cbtn">판매수량확인</button>
-            </form>
-        </div>
-    );
+                );
+            case "insert":
+                return <MenuRegistrationPage />;
+            case "read":
+                return <Temp />;
+        }
+    };
+
+    return <div>{showPage()}</div>;
 };
 
 export default StorekeeperMainPage;
