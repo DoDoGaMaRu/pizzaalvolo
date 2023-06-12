@@ -11,6 +11,7 @@ import Review from "./review/Review";
 import Basket from "./basket/Basket";
 import Temp from "./pizzapage/temp"
 import StorekeeperPage from "./storekeeperpage/StorekeeperPage";
+import Tempp from "./storekeeperpage/component/temp";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -23,7 +24,7 @@ root.render(
                 <Route path="/pizza" element={<Temp/>}></Route>
                 <Route path="/review/:id" element={<Review />}></Route>
                 <Route path="/basket" element={<Basket/>}></Route>
-                <Route path="/storekeeper" element={<StorekeeperPage/>}></Route>
+                <Route path="/storekeeper" element={<Tempp/>}></Route>
             </Routes>
         </BrowserRouter>
     </React.StrictMode>

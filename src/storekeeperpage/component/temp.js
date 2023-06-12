@@ -2,7 +2,7 @@ import {useEffect, useState} from "react";
 import PizzaPage from "./ChartPage";
 import ChartPage from "./ChartPage";
 
-export default function Temp() {
+export default function Tempp() {
     const [menuData, setMenuData] = useState([]);
     const [chartData, setChartData] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -11,6 +11,7 @@ export default function Temp() {
         method: 'Get'
     }).then(res => res.json()).then(data => {
         setMenuData(data);
+        console.log("TOTAL_COUNT");
         console.log(data);
     })}, loading)
 
@@ -18,6 +19,7 @@ export default function Temp() {
         method: 'Get'
     }).then(res => res.json()).then(data => {
         setChartData(data);
+        console.log("CHART");
         console.log(data);
         setLoading(false);
     })}, loading)
@@ -28,7 +30,7 @@ export default function Temp() {
                 loading ? (
                     <div>로딩 중</div>
                 ) : (
-                    <ChartPage menuData={menuData.menu_data} chartData={chartData.chart}></ChartPage>
+                    <ChartPage menuData={menuData.menu_data} chart_data={chartData.chart}></ChartPage>
                 )
             }
         </div>
