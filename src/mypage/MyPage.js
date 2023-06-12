@@ -3,13 +3,14 @@ import MyInfo from "./component/MyInfo";
 import "./MyPage.css"
 import {useCallback, useState} from "react";
 import OrderHistoryPage from "./component/OrderHistoryPage";
+import {useParams} from "react-router-dom";
 
 export default function MyPage() {
-    const [curTab, setCurTab] = useState("주문내역");
+    const detail = useParams().detail;
+    const [curTab, setCurTab] = useState(detail);
     const onChangeTabMenu = useCallback((text) => {
         setCurTab(text);
     })
-
     const showPage = () => {
         switch(curTab){
             case '주문내역':
@@ -20,7 +21,7 @@ export default function MyPage() {
     }
     return(
         <div className="mypage">
-            <TabMenu onChangeTabMenu={onChangeTabMenu}></TabMenu>
+            <TabMenu onChangeTabMenu={onChangeTabMenu} detail={curTab}></TabMenu>
             <div>
                 {showPage()}
             </div>

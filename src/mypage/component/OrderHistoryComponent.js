@@ -7,7 +7,7 @@ export default function OrderHistoryComponent({order}) {
     const [review, setReview] = useState(order)
     const [info, setInfo] = useState("");
     const [score, setScore] = useState(0);
-    const [isWrite, setIsWrite] = useState(order.review);//Todo DB에서 리뷰 유무를 받아 설정
+    const [isWrite, setIsWrite] = useState(order.review);
     const [id, setId] = useState(order.id);
     const click = () => {
         setToggle(!toggle)
@@ -72,7 +72,7 @@ export default function OrderHistoryComponent({order}) {
 
                         </div>
                     </div>
-                    <div role="button" className="review-btn" onClick={isWrite ? null : click}> 후기작성 </div>
+                    {!isWrite ? <div role="button" className="review-btn" onClick={isWrite ? null : click}> 후기작성 </div> : <div className="review-btn"> 후기 작성 완료 </div>}
                     {toggle ?
                         <div className="number-area">
                             <div className="number-area-left">
@@ -80,7 +80,7 @@ export default function OrderHistoryComponent({order}) {
                             </div>
                             <div className="number-area-right">
                                 <div className="input-number-box">
-                                    <input type="text" onChange={(e) => setInfo(e.target.value)} placeholder="매우맛있음" />
+                                    <input type="text" onChange={(e) => setInfo(e.target.value)} placeholder="후기를 작성해 주세요!" />
                                     <span className="btn-modify-number-gray" onClick={() => {
                                         click();
                                         write();

@@ -22,7 +22,7 @@ function Header() {
 
 function TapTop({setOpenNav}) {
     let middleItems = [{text: '피자', url: '/pizza'}, {text: '스페셜반반피자', url: '#'}, {text: '세트', url: '#'}, {text: '사이드', url: '#'}, {text: '하프엔하프', url: '#'}, {text: '멤버십·제휴할인', url: '#'}, {text: '이벤트', url: '#'}]
-    let rightItems = [{text: '마이페이지', url: '/mypage'}, {text: '점주페이지', url: ''}]
+    let rightItems = [{text: '마이페이지', url: '/mypage/정보수정'}, {text: '점주페이지', url: '/storekeeper'}]
 
     return (
         <div class="main-tap-top">
@@ -76,7 +76,7 @@ function TapNav({openNav, setOpenNav}) {
             [{text: '멤버십·제휴할인', url: '#'}, {text: '멤버십 혜택', url: '#'}, {text: '통신사 제휴 할인',  url: '#'}],
             [{text: '이벤트', url: '#'}],
             [{text: '매장찾기', url: '#'}, {text: '지역명 찾기', url: '#'}, {text: '매장명 찾기',  url: '#'}, {text: '현위치 찾기',  url: '#'}],
-            [{text: '마이페이지', url: '/mypage'}, {text: '주문내역', url: '#'}, {text: '쿠폰함',  url: '#'}, {text: 'MY CLASS', url: '#'}, {text: '비행기스템프', url: '#'}, {text: '정보수정',  url: '/mypage'}, {text: '회원탈퇴',  url: '#'}],
+            [{text: '마이페이지', url: '/mypage/정보수정'}, {text: '주문내역', url: '/mypage/주문내역'}, {text: '쿠폰함',  url: '#'}, {text: 'MY CLASS', url: '#'}, {text: '비행기스템프', url: '#'}, {text: '정보수정',  url: '/mypage/정보수정'}, {text: '회원탈퇴',  url: '#'}],
             [{text: '주문하기', url: '/pizza'}, {text: '배달주문하기', url: '/pizza'}, {text: '포장주문하기', url: '#'}, {text: '간편주문', url: '#'}, {text: 'E쿠폰',  url: '#'}, {text: '선물하기',  url: '#'}],
         ]
 
