@@ -10,7 +10,7 @@ export default function Tempp() {
     useEffect(() => {fetch('http://202.31.202.34:443/order/totalCountEachMenu', {
         method: 'Get'
     }).then(res => res.json()).then(data => {
-        setMenuData(data);
+        setMenuData(data.menu_data);
         console.log("TOTAL_COUNT");
         console.log(data);
     })}, loading)
@@ -18,7 +18,7 @@ export default function Tempp() {
     useEffect(() => {fetch('http://202.31.202.34:443/order/chart', {
         method: 'Get'
     }).then(res => res.json()).then(data => {
-        setChartData(data);
+        setChartData(data.chart);
         console.log("CHART");
         console.log(data);
         setLoading(false);
@@ -30,7 +30,7 @@ export default function Tempp() {
                 loading ? (
                     <div>로딩 중</div>
                 ) : (
-                    <ChartPage menuData={menuData.menu_data} chart_data={chartData.chart}></ChartPage>
+                    <ChartPage menu_data={menuData} chart_data={chartData}></ChartPage>
                 )
             }
         </div>
