@@ -1,5 +1,4 @@
 import {useEffect, useState} from "react";
-import PizzaPage from "./ChartPage";
 import ChartPage from "./ChartPage";
 
 export default function Tempp() {
