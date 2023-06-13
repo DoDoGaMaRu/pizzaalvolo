@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../../index.css";
-import Temp from "./Temp";
+import Tempp from "./Tempp";
 import MenuRegistrationPage from "./MenuRegistrationPage";
 import "./StoreKeeperMainPage.css"
 
@@ -34,7 +34,7 @@ const StorekeeperMainPage = () => {
             case "insert":
                 return <MenuRegistrationPage />;
             case "read":
-                return <Temp />;
+                return <Tempp />;
         }
     };
 
