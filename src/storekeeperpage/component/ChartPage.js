@@ -2,6 +2,7 @@ import React from "react";
 import "../../index.css";
 import { Bar } from 'react-chartjs-2';
 import "./ChartPage.css";
+import Chart from 'chart.js/auto';
 
 export default function ChartPage({ menu_data, chart_data }) {
     console.log("CHART_PAGE");
